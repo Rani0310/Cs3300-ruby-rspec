@@ -31,12 +31,10 @@ def max_2_sum arr
     #adds and returns 2 largest elements
     sum = largest + secondLargest
     return sum
-    
   end    
 end
 
 def sum_to_n? arr, n
-
   #saves length
   length = arr.length
   #if array length is greater than 1, enter for iterations
@@ -60,13 +58,11 @@ end
 # Part 2
 
 def hello(name)
-  
   #return Hello + incoming name
   return "Hello, #{name}"
 end
 
 def starts_with_consonant? s
-
   #checks if a line starts with any vowel in any case and nonletter characters
   if /^[^aeiouAEIOU\W]/.match(s) == nil
     #if s does not start with consonant
@@ -83,25 +79,17 @@ end
 # Part 3
 
 class BookInStock
- 
   #allows isbn and price to be used outside of method
-   attr_accessor :isbn, :price
-  
-   #constructor
-    def initialize isbn, price
-      #checks if isbn is empty and price <= zero, throw error
-      raise ArgumentError if isbn.empty? || price <= 0
-      @isbn = isbn
-      @price = price
-    end
-  
-    #format price string
-    def price_as_string
-      "$%.2f" % @price
-    end
-  
-  
+  attr_accessor :isbn, :price
+  #constructor
+  def initialize isbn, price
+    #checks if isbn is empty and price <= zero, throw error
+    raise ArgumentError if isbn.empty? || price <= 0
+    @isbn = isbn
+    @price = price
+  end
+  #format price string
+  def price_as_string
+    "$%.2f" % @price
+  end
 end
-
-
-
